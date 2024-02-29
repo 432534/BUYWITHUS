@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>Sliding Login Form</title>
+	<link rel="stylesheet" type="text/css" href="mainlogin.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body >
+    <!--  
+	<div class="banner1">
+        <img src="ggg.gif">
+        <div class="text-box">
+        <h1></h1>
+        </P>
+        </div>
+    </div>
+    <div class="banner2">
+        <img src="gg.jpg">
+        <div class="text-box">
+        <h1></h1>
+        
+        </div>
+    </div>
+    <div class="banner3">
+        <img src="giphy.gif">
+        <div class="text-box">
+        <h1></h1>
+        
+        </div>
+    </div><div class="banner4">
+        <img src="animation4.png">
+        <div class="text-box">
+        <h1></h1>
+        
+        </div>
+    </div>
+-->
+	
+
+
+	<div class="container" id="main">
+		<div class="sign-up">
+			<form action="#">
+				
+			</form>
+		</div>
+		<div class="sign-in">
+			<form action="#">
+				<h1>Sign in</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<p>or use your account</p>
+				<input type="email" name="email" placeholder="Email" required="">
+				<input type="password" name="pswd" placeholder="Password" required="">
+				<button>Sign In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-left">
+					<h1>Wellcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-right">
+					<h1>Hello, Friend</h1>
+					<p>Enter your personal details and start journey with us</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="background-container"></div>
+    </head>
+    <body>
+		<script type="text/javascript">
+			const signUpButton = document.getElementById('signUp');
+			const signInButton = document.getElementById('signIn');
+			const main = document.getElementById('main');
+			const signInForm = document.forms['signInForm'];
+		
+			signUpButton.addEventListener('click', () => {
+				main.classList.add("right-panel-active");
+			});
+		
+			signInButton.addEventListener('click', () => {
+				main.classList.remove("right-panel-active");
+			});
+		
+			// Function to handle form submission
+			signInForm.addEventListener('submit', function (event) {
+				event.preventDefault(); // Prevent the default form submission behavior
+				alert('You have signed in!');
+				// You can add further logic here, such as submitting the form data via AJAX
+			});
+		</script>
+</body>
+</html>
